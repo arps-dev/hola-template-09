@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Performance: Critical resource hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Performance: Optimized font loading -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <!-- SEO: Enhanced meta tags -->
+    <title>Memories - Relive Your College Fest Moments | Retro Photo Gallery</title>
+    <meta name="description" content="Memories is a vintage-inspired web app for storing and browsing college fest photos. Discover polaroid-style memories, upcoming events, and relive your golden college moments." />
+    <meta name="author" content="Memories College Fest Gallery" />
+    <meta name="keywords" content="college fest photos, vintage photo gallery, polaroid memories, student events, college moments, retro photo album" />
+    <link rel="canonical" href="https://memories-app.lovable.app/" />
+    
+    <!-- SEO: Enhanced Open Graph -->
+    <meta property="og:title" content="Memories - Relive Your College Fest Moments" />
+    <meta property="og:description" content="A retro-themed digital album for your college fest memories. Browse polaroid-style photos and upcoming events in vintage style." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://memories-app.lovable.app/" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:image:alt" content="Memories - Vintage college fest photo gallery" />
+    <meta property="og:site_name" content="Memories - College Fest Gallery" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- SEO: Enhanced Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@memories_app" />
+    <meta name="twitter:creator" content="@memories_app" />
+    <meta name="twitter:title" content="Memories - College Fest Photo Gallery" />
+    <meta name="twitter:description" content="Vintage-inspired photo gallery for college fest memories" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:image:alt" content="Memories vintage photo gallery interface" />
+    
+    <!-- Performance: Resource hints -->
+    <link rel="preload" href="/src/assets/hero-collage.webp" as="image" media="(min-width: 768px)">
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- Performance: Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
+    
+    <!-- SEO: Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Memories - College Fest Gallery",
+      "description": "Vintage-inspired web application for storing and browsing college fest photos with polaroid-style memories",
+      "url": "https://memories-app.lovable.app/",
+      "applicationCategory": "PhotoApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Memories College Fest Gallery"
+      },
+      "featureList": [
+        "Vintage photo gallery",
+        "Polaroid-style memories",
+        "College fest events",
+        "Photo sharing",
+        "Retro design interface"
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "Memories - College Fest Gallery",
+  "short_name": "Memories",
+  "description": "Vintage-inspired photo gallery for college fest memories",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#4a9b8e",
+  "background_color": "#faf9f6",
+  "orientation": "portrait-primary",
+  "categories": ["photo", "social", "education"],
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    }
+  ]
+}
